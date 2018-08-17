@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<title>Site Maintenance</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
+<title>Dummy Angular</title>
 
 <article>
-    <h1>Holla!</h1>
-    <div>
-        <p>Please enter company name</p>
+    <h4>Holla! Please enter company name</h4>
         <input class="form-control" type="text" ng-model="selectedCompany" uib-typeahead="company.companyName for company in getCompanies($viewValue)"
                typeahead-loading="loading" typeahead-min-length="3" typeahead-wait-ms="500">
-        <button ng-click="goToRoute('/details/company_name/' + selectedCompany)" class="btn btn-success" type="submit">Submit</button>
+        <br/>
+        <button ng-click="goToRoute('/details/company_name/' + selectedCompany)" class="btn btn-success" type="submit">Search</button>
     </div>
 </article>

@@ -8,6 +8,21 @@ var view1 = angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
   });
 }]);
 
+// view1.factory('callHandler', ['$http', function ($http) {
+//   return {
+//     getCompanies: function(searchKeyword) {
+//       return $http.get('https://daas-qa-sig-api.circleback.com/service/contactcloud/companies/autocomplete', {
+//         params: {
+//           company_name: searchKeyword
+//         }
+//       }).success(function(response){
+//         return response.searchResults;
+//
+//       });
+//     }
+//   }
+//
+// }]);
 
 view1.controller('View1Ctrl', [
     '$scope', '$http', '$location', function($scope, $http, $location) {
