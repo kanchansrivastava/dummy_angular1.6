@@ -10,7 +10,7 @@ var view1 = angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 
 
 view1.controller('View1Ctrl', [
-    '$scope', '$http', function($scope, $http) {
+    '$scope', '$http', '$location', function($scope, $http, $location) {
   $scope.selectedCompany = '';
 
   $scope.getCompanies = function(searchKeyword) {
@@ -21,5 +21,10 @@ view1.controller('View1Ctrl', [
     }).then(function(response){
         return response.data.searchResults
     });
+  };
+
+  $scope.goToRoute = function (path) {
+    console.log($scope.selectedCompany);
+    $location.path(path);
   };
 }]);
